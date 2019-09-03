@@ -606,10 +606,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     // Show the splash screen for 5 seconds.
-    setVisible(splashScreenWindow, true);
-    popupWindowBlocker.style.visibility = "visible";
-    popupWindows.style.pointerEvents = "none";  // Disable the mouse during splash screen.
-    setTimeout(closeSplashScreen, 5000);
+    // setVisible(splashScreenWindow, true);
+    // popupWindowBlocker.style.visibility = "visible";
+    // popupWindows.style.pointerEvents = "none";  // Disable the mouse during splash screen.
+    // setTimeout(closeSplashScreen, 5000);
+
+    console.info('Closing splash screen (patch');
+    closeSplashScreen();
+    console.info("Toggle full screen (F11) on start (patch)");
+    toggleFullScreen();
+
     console.info("App window ready");
 
     // Tell "main.js" we are ready to navigate so we can load the app options.
